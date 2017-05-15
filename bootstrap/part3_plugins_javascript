@@ -30,86 +30,115 @@
         -o-background-size: cover;
       }
 
+      .jumbotron {
+            background: rgba(238, 238, 238, 0.5);
+        }
+
       /* Images */
       img {
         width: 100%;
       }
 
+      footer {
+        margin-bottom: 30px;
+      }
+
+      @media all and (max-width: 480px) { /*titre + onglets sur une même ligne sur écran <480*/
+      .navbar {
+                font-size: 18px;
+            }
+
+      .navbar-brand {
+                font-size: 16px;
+            }
+
+
     </style>
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" data-spy="scroll" data-target=".navbar">
 
-  <header>
+<header>
 
       <!-- Navigation
       ================================================== -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar">
-      <div class="container-fluid">
+  <nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
+      <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
+            <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#page-top">La maison de l'architecture</a>
         </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="hidden"><a href="#page-top"></a></li>
-          <li><a href="#accueil">Accueil</a></li>
-          <li><a data-toggle="dropdown" href="#qui">Qui sommes-nous ?</a></li>
-          <li><a data-toggle="dropdown" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      </div>
-    </nav>  
-
-  </header>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="hidden"><a href="#page-top"></a></li>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#qui">Qui sommes-nous ?</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+</header>
 
     <!-- Caroussel
     ================================================== -->
-  <div id="carousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carousel" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel" data-slide-to="1"></li>
-      <li data-target="#carousel" data-slide-to="2"></li>
-      <li data-target="#carousel" data-slide-to="3"></li>
-    </ol> 
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="assets/img/archi1.jpg" alt="Architecture">
-            <h3 class="carousel-caption">Un design futuriste</h3>
+<div class="carousel slide" data-ride="carousel" id="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+            <li data-target="#carousel" data-slide-to="3"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="first-slide" src="assets/img/archi1.jpg" alt="Architecture">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Un design futuriste</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="second-slide" src="assets/img/archi2.jpg" alt="Architecture">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Un design futuriste</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="third-slide" src="assets/img/archi3.jpg" alt="Architecture">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Un design futuriste</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="fourth-slide" src="assets/img/archi4.jpg" alt="Architecture">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Un design futuriste</h1>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="item">
-          <img src="assets/img/archi2.jpg" alt="Architecture">
-            <h3 class="carousel-caption">Un design futuriste</h3>
-        </div>
-        <div class="item">
-          <img src="assets/img/archi3.jpg" alt="Architecture">
-            <h3 class="carousel-caption">Un design futuriste</h3>
-        </div>
-        <div class="item">
-          <img src="assets/img/archi4.jpg" alt="Architecture">
-            <h3 class="carousel-caption">Un design futuriste</h3>
-        </div>
-
-        <a class="left carousel-control" href="#carousel" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left"></span>
-          <span class="sr-only">Précédent</span>
+        <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Précédent</span>
         </a>
-        <a class="right carousel-control" href="#carousel" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right"></span>
-          <span class="sr-only">Suivant</span>
+        <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Suivant</span>
         </a>
     </div>
 
-<style>
-h3 {
-  color: white;
-}
-</style>
 
     <!-- Corps de page déjà codé
     ================================================== -->
@@ -146,7 +175,7 @@ h3 {
 
     <!-- Pied de page
     ================================================== -->
-    <footer>
+    <footer class= "row text-center">
       <a class="btn btn-default" href="#"><i class="fa fa-twitter fa-2x"></i></a>
       <a class="btn btn-default" href="#"><i class="fa fa-facebook fa-2x"></i></a>
       <a class="btn btn-default" href="#"><i class="fa fa-google-plus fa-2x"></i></a>
