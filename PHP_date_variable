@@ -9,4 +9,6 @@ $heure = date('H');
 $minute = date('i');
 
 echo 'Nous sommes le ' . $jour . '/' . $mois . '/' . $annee . 'et il est ' . $heure. ' h ' . $minute;
+//ou
+echo "Nous sommes le " . $jour, $mois, $annee;
 ?>
